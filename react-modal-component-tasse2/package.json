@@ -2,19 +2,26 @@
   "name": "react-modal-component-tasse2",
   "version": "0.1.5",
   "description": "A React modal component",
-  "main": "./src/components/Modal.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "react",
+    "modal",
+    "component"
+  ],
+  "author": "Mamitasse",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.8",
-    "@babel/preset-env": "^7.24.8",
-    "@babel/preset-react": "^7.24.7"
-  },
-  "author": "Tassadit",
-  "license": "MIT"
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12"
+  }
 }
