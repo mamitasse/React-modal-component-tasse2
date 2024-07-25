@@ -1,4 +1,4 @@
-#### React Modal Component Tasse2
+# React Modal Component Tasse2
 
 Un composant React pour afficher une modal simple.
 
@@ -10,16 +10,17 @@ Ce composant est conçu pour le projet 14 du parcours de formation OpenClassroom
 
 ### Étape 1 : Installer le composant
 ## Dépendances
-
+```bash
 npm i react-modal-component-tasse2
+``` 
 
 ### Étape 2 : Installer les dépendances peer
 Assurez-vous d'avoir les dépendances peer suivantes installées dans votre projet :
 
-
+```bash
 npm install react@^18.2.55 react-dom@^18.2.19 prop-types@^15.8.1
 
-
+```
 
 
 
