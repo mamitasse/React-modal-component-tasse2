@@ -1,6 +1,6 @@
 {
   "name": "react-modal-component-tasse2",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A React modal component",
   "main": "dist/index.js",
   "scripts": {

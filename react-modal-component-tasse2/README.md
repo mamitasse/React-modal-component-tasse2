@@ -1,10 +1,10 @@
-button# React Modal Component Tasse2
+# React Modal Component Tasse2
 
-Un composant React pour afficher une modal simple.
+### Un composant React pour afficher une modal simple.
 
 ## Description du composant
 
-Ce composant est conçu pour le projet 14 du parcours de formation OpenClassrooms "Développeur JavaScript React".
+### Ce composant est conçu pour le projet 14 du parcours de formation OpenClassrooms "Développeur JavaScript React".
 
 ## Installation
 
