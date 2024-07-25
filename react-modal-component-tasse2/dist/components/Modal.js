@@ -27,7 +27,7 @@ var Modal = function Modal(_ref) {
     className: "modal-header"
   }, /*#__PURE__*/_react["default"].createElement("h2", null, title), /*#__PURE__*/_react["default"].createElement("button", {
     onClick: onClose,
-    className: "modal-close-button"
+    className: "modal-close-button croix"
   }, "\xD7")), /*#__PURE__*/_react["default"].createElement("div", {
     className: "modal-content"
   }, children), /*#__PURE__*/_react["default"].createElement("div", {

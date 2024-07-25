@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+button# React Modal Component Tasse2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un composant React pour afficher une modal simple.
 
-## Available Scripts
+## Description du composant
 
-In the project directory, you can run:
+Ce composant est conçu pour le projet 14 du parcours de formation OpenClassrooms "Développeur JavaScript React".
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Étape 1 : Installer le composant
+## Dépendances
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm i react-modal-component-tasse2
 
-### `npm test`
+### Étape 2 : Installer les dépendances peer
+Assurez-vous d'avoir les dépendances peer suivantes installées dans votre projet :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+npm install react@^18.2.55 react-dom@^18.2.19 prop-types@^15.8.1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Composant Modal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Propriétés
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Propriété | Type     | Description                                  |
+|-----------|----------|----------------------------------------------|
+| isOpen    | Boolean  | Indique si la modal est ouverte ou fermée    |
+| onClose   | Function | Callback pour fermer la modal                |
+| children  | Node     | Contenu à afficher à l'intérieur de la modal |
+   
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Exemples d'utilisation
+```jsx
+<Modal
+  isOpen={isOpen}
+  onClose={handleClose}
+>
+  <h2>Titre de la Modal</h2>
+  <p>Voici le contenu de la modal</p>
+  <button onClick={handleClose}>Fermer</button>
+</Modal>
+ ```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Exemple d'utilisation dans un composant React :
+```jsx
+import React, { useState } from 'react';
+import Modal from 'react-modal-component-tasse2';
 
-### Analyzing the Bundle Size
+function App() {
+const [isOpen, setIsOpen] = useState(false);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+const handleClose = () => setIsOpen(false);
+const handleOpen = () => setIsOpen(true);
 
-### Making a Progressive Web App
+return (
+<div>
+<button onClick={handleOpen}>Ouvrir la Modal</button>
+<Modal
+        isOpen={isOpen}
+        onClose={handleClose}
+      >
+<h2>Titre de la Modal</h2>
+<p>Voici le contenu de la modal</p>
+<button onClick={handleClose}>Fermer</button>
+</Modal>
+</div>
+);
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+export default App;
+```
 
-### Advanced Configuration
+## Vous pouvez remplacer le style par défaut en utilisant la propriété style :
+```jsx
+<Modal
+style={{ backgroundColor: 'lightblue' }}
+isOpen={isOpen}
+onClose={handleClose}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+>
 
-### Deployment
+  <h2>Titre de la Modal</h2>
+  <p>Voici le contenu de la modal</p>
+  <button onClick={handleClose}>Fermer</button>
+</Modal>
+``` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Accessibilité
 
-### `npm run build` fails to minify
+Le composant modal respecte les meilleures pratiques en matière d'accessibilité, comme le piégeage du focus à l'intérieur de la modal lorsqu'elle est ouverte et le retour du focus à l'élément précédemment focalisé à la fermeture.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+De plus, la modal peut être fermée en :
+
+* Cliquant sur le bouton de fermeture de la modal
+* Cliquant à l'extérieur de la modal
+* Naviguant vers le bouton de fermeture avec la touche Tab, et en appuyant sur la touche Entrée
+
+## Dépendances 
+
+```json
+
+"peerDependencies": {
+"react": "^18.2.55",
+"react-dom": "^18.2.19",
+"prop-types": "^15.8.1"
+}
+
+```
+
+## Licence
+Ce composant est distribué sous la licence MIT.
+
+La section "Licence" indique que le projet est sous licence MIT. Voici ce que cela signifie généralement :
+
+1. **Libre utilisation** : Vous pouvez utiliser le code pour n'importe quel but.
+2. **Redistribution** : Vous pouvez distribuer le code, que ce soit sous forme binaire ou sous forme de source.
+3. **Modifications** : Vous pouvez modifier le code et distribuer vos versions modifiées.
+4. **Inclusion de la licence** : Vous devez inclure le texte de la licence originale dans toute copie ou distribution substantielle du code.
+
